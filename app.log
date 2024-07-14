@@ -1,0 +1,214 @@
+[2024-06-14 16:14:14 +0800] [4814] [INFO] Starting gunicorn 22.0.0
+[2024-06-14 16:14:14 +0800] [4814] [INFO] Listening at: http://127.0.0.1:6006 (4814)
+[2024-06-14 16:14:14 +0800] [4814] [INFO] Using worker: sync
+[2024-06-14 16:14:14 +0800] [4815] [INFO] Booting worker with pid: 4815
+[2024-06-14 16:14:14 +0800] [4827] [INFO] Booting worker with pid: 4827
+[2024-06-14 16:14:15 +0800] [4840] [INFO] Booting worker with pid: 4840
+[2024-06-14 16:14:15 +0800] [4853] [INFO] Booting worker with pid: 4853
+[2024-06-14 16:14:15 +0800] [4852] [INFO] Booting worker with pid: 4852
+[2024-06-14 16:14:15 +0800] [4876] [INFO] Booting worker with pid: 4876
+[2024-06-14 16:14:15 +0800] [4888] [INFO] Booting worker with pid: 4888
+[2024-06-14 16:14:15 +0800] [4900] [INFO] Booting worker with pid: 4900
+[2024-06-18 11:49:38 +0800] [4389] [INFO] Starting gunicorn 22.0.0
+[2024-06-18 11:49:38 +0800] [4389] [INFO] Listening at: http://127.0.0.1:6006 (4389)
+[2024-06-18 11:49:38 +0800] [4389] [INFO] Using worker: sync
+[2024-06-18 11:49:38 +0800] [4390] [INFO] Booting worker with pid: 4390
+[2024-06-18 11:49:38 +0800] [4402] [INFO] Booting worker with pid: 4402
+[2024-06-18 11:49:38 +0800] [4403] [INFO] Booting worker with pid: 4403
+[2024-06-18 11:49:38 +0800] [4426] [INFO] Booting worker with pid: 4426
+[2024-06-18 11:49:38 +0800] [4438] [INFO] Booting worker with pid: 4438
+[2024-06-18 11:49:38 +0800] [4450] [INFO] Booting worker with pid: 4450
+[2024-06-18 11:49:38 +0800] [4462] [INFO] Booting worker with pid: 4462
+[2024-06-18 11:49:38 +0800] [4463] [INFO] Booting worker with pid: 4463
+[2024-06-18 11:59:25 +0800] [4715] [INFO] Starting gunicorn 22.0.0
+[2024-06-18 11:59:25 +0800] [4715] [INFO] Listening at: http://127.0.0.1:6006 (4715)
+[2024-06-18 11:59:25 +0800] [4715] [INFO] Using worker: sync
+[2024-06-18 11:59:25 +0800] [4716] [INFO] Booting worker with pid: 4716
+[2024-06-18 11:59:25 +0800] [4728] [INFO] Booting worker with pid: 4728
+[2024-06-18 11:59:25 +0800] [4740] [INFO] Booting worker with pid: 4740
+[2024-06-18 11:59:25 +0800] [4752] [INFO] Booting worker with pid: 4752
+[2024-06-18 11:59:25 +0800] [4764] [INFO] Booting worker with pid: 4764
+[2024-06-18 11:59:25 +0800] [4776] [INFO] Booting worker with pid: 4776
+[2024-06-18 11:59:25 +0800] [4777] [INFO] Booting worker with pid: 4777
+[2024-06-18 11:59:25 +0800] [4800] [INFO] Booting worker with pid: 4800
+[2024-06-18 12:00:39 +0800] [4715] [CRITICAL] WORKER TIMEOUT (pid:4728)
+[2024-06-18 12:00:39 +0800] [4715] [CRITICAL] WORKER TIMEOUT (pid:4777)
+[2024-06-18 12:00:39 +0800] [4728] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-06-18 12:00:39 +0800] [4777] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-06-18 12:00:39 +0800] [4728] [INFO] Worker exiting (pid: 4728)
+[2024-06-18 12:00:39 +0800] [4777] [INFO] Worker exiting (pid: 4777)
+[2024-06-18 12:00:39 +0800] [4829] [INFO] Booting worker with pid: 4829
+[2024-06-18 12:00:39 +0800] [4715] [ERROR] Worker (pid:4728) was sent SIGKILL! Perhaps out of memory?
+[2024-06-18 12:00:39 +0800] [4841] [INFO] Booting worker with pid: 4841
+[2024-06-18 12:02:15 +0800] [4883] [INFO] Starting gunicorn 22.0.0
+[2024-06-18 12:02:15 +0800] [4883] [INFO] Listening at: http://127.0.0.1:6006 (4883)
+[2024-06-18 12:02:15 +0800] [4883] [INFO] Using worker: sync
+[2024-06-18 12:02:15 +0800] [4884] [INFO] Booting worker with pid: 4884
+[2024-06-18 12:02:15 +0800] [4896] [INFO] Booting worker with pid: 4896
+[2024-06-18 12:02:16 +0800] [4908] [INFO] Booting worker with pid: 4908
+[2024-06-18 12:02:16 +0800] [4920] [INFO] Booting worker with pid: 4920
+[2024-06-18 12:02:16 +0800] [4921] [INFO] Booting worker with pid: 4921
+[2024-06-18 12:02:16 +0800] [4944] [INFO] Booting worker with pid: 4944
+[2024-06-18 12:45:03 +0800] [4883] [CRITICAL] WORKER TIMEOUT (pid:4896)
+[2024-06-18 12:45:03 +0800] [4883] [CRITICAL] WORKER TIMEOUT (pid:4921)
+[2024-06-18 12:45:03 +0800] [4896] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-06-18 12:45:03 +0800] [4896] [INFO] Worker exiting (pid: 4896)
+[2024-06-18 12:45:03 +0800] [4921] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-06-18 12:45:03 +0800] [4921] [INFO] Worker exiting (pid: 4921)
+[2024-06-18 12:45:04 +0800] [5545] [INFO] Booting worker with pid: 5545
+[2024-06-18 12:45:04 +0800] [4883] [ERROR] Worker (pid:4896) was sent SIGKILL! Perhaps out of memory?
+[2024-06-18 12:45:04 +0800] [5557] [INFO] Booting worker with pid: 5557
+[2024-06-18 15:00:11 +0800] [4883] [CRITICAL] WORKER TIMEOUT (pid:4908)
+[2024-06-18 15:00:11 +0800] [4883] [CRITICAL] WORKER TIMEOUT (pid:5545)
+[2024-06-18 15:00:11 +0800] [5545] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-06-18 15:00:11 +0800] [4908] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/sync.py", line 134, in handle
+    req = next(parser)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/parser.py", line 42, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 257, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 269, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/message.py", line 260, in get_data
+    data = unreader.read()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 37, in read
+    d = self.chunk()
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/http/unreader.py", line 64, in chunk
+    return self.sock.recv(self.mxchunk)
+  File "/root/miniconda3/lib/python3.10/site-packages/gunicorn/workers/base.py", line 203, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2024-06-18 15:00:11 +0800] [5545] [INFO] Worker exiting (pid: 5545)
+[2024-06-18 15:00:11 +0800] [4908] [INFO] Worker exiting (pid: 4908)
+[2024-06-18 15:00:11 +0800] [7711] [INFO] Booting worker with pid: 7711
+[2024-06-18 15:00:12 +0800] [4883] [ERROR] Worker (pid:5545) was sent SIGKILL! Perhaps out of memory?
+[2024-06-18 15:00:12 +0800] [7723] [INFO] Booting worker with pid: 7723
+[2024-06-18 15:03:22 +0800] [4883] [INFO] Handling signal: winch
+[2024-06-18 15:03:24 +0800] [4883] [INFO] Handling signal: winch
+[2024-06-18 15:08:13 +0800] [4944] [INFO] Parent changed, shutting down: <Worker 4944>
+[2024-06-18 15:08:13 +0800] [4944] [INFO] Worker exiting (pid: 4944)
+[2024-06-18 15:08:13 +0800] [7723] [INFO] Parent changed, shutting down: <Worker 7723>
+[2024-06-18 15:08:13 +0800] [7723] [INFO] Worker exiting (pid: 7723)
+[2024-06-18 15:08:38 +0800] [5557] [INFO] Parent changed, shutting down: <Worker 5557>
+[2024-06-18 15:08:38 +0800] [7711] [INFO] Parent changed, shutting down: <Worker 7711>
+[2024-06-18 15:08:38 +0800] [7711] [INFO] Worker exiting (pid: 7711)
+[2024-06-18 15:08:38 +0800] [5557] [INFO] Worker exiting (pid: 5557)
+[2024-06-18 15:09:33 +0800] [7933] [INFO] Starting gunicorn 22.0.0
+[2024-06-18 15:09:33 +0800] [7933] [INFO] Listening at: http://127.0.0.1:6006 (7933)
+[2024-06-18 15:09:33 +0800] [7933] [INFO] Using worker: sync
+[2024-06-18 15:09:33 +0800] [7934] [INFO] Booting worker with pid: 7934
+[2024-06-18 15:09:33 +0800] [7946] [INFO] Booting worker with pid: 7946
+[2024-06-18 15:09:33 +0800] [7958] [INFO] Booting worker with pid: 7958
+[2024-06-18 15:09:33 +0800] [7970] [INFO] Booting worker with pid: 7970
+[2024-06-18 15:09:33 +0800] [7982] [INFO] Booting worker with pid: 7982
+[2024-06-18 15:09:33 +0800] [7994] [INFO] Booting worker with pid: 7994
+[2024-06-18 15:09:34 +0800] [8006] [INFO] Booting worker with pid: 8006
+[2024-06-18 15:09:34 +0800] [8007] [INFO] Booting worker with pid: 8007
+[2024-06-18 15:10:55 +0800] [7933] [INFO] Handling signal: winch
+[2024-06-18 15:10:56 +0800] [7933] [INFO] Handling signal: winch
+[2024-06-18 15:52:46 +0800] [7994] [WARNING] Invalid request from ip=127.0.0.1: Invalid HTTP method: '\x16\x03\x01\x02[\x01\x00\x02W\x03\x03Îöë\x87\x0f\xa0öÙ£9«e\x89C\x8eE6[üaBï_øÐRÒ\x04\x9c%Ë/'
+[2024-06-21 16:52:05 +0800] [7934] [WARNING] Invalid request from ip=127.0.0.1: Invalid HTTP request line: 'SSH-2.0-OpenSSH'
